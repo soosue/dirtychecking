@@ -1,0 +1,22 @@
+spring:
+  external:
+    datasource:
+      driver-class-name: org.mariadb.jdbc.Driver
+      url: jdbc:mariadb://192.168.1.34:3306/external_db?autoReconnect=true&characterEncoding=utf8
+      username: anymobi
+      password: anymobi1530!
+      data: external_data.sql
+  internal:
+    datasource:
+      driver-class-name: org.mariadb.jdbc.Driver
+      url: jdbc:mariadb://192.168.1.34:3306/mobile_notice_manager?autoReconnect=true&characterEncoding=utf8
+      username: anymobi
+      password: anymobi1530!
+      data: internal_data.sql
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+logging:
+  level:
+    org.hibernate.SQL: debug
